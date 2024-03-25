@@ -47,7 +47,7 @@ public class ViewController {
 		System.out.println("Player Wins!");
 		gameFrame.getGameTablePanel().setChipsOnTable(0);
 		gameFrame.updateGameTable();
-		JOptionPane.showMessageDialog(null, player.getLoginName()+" wins!","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
+		JOptionPane.showMessageDialog(null, "Player wins!","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 	}
 	
 	public void displayDealerWin() {
