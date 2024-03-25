@@ -22,7 +22,7 @@ public class GameController {
 	
 	public void run() {
 		
-		//boolean login = this.view.getPLayerlogin();
+		boolean login = this.view.getPLayerlogin();
 		boolean login = true;
 		
 		if(login) {

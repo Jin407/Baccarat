@@ -62,7 +62,7 @@ public class GameTablePanel extends JPanel {
 			x1 += 50;
 		}
 		
-		g.drawString(player.getLoginName(), 950, 580);
+		g.drawString("Player", 950, 580);
 		
 		g.drawString("Value: "+player.getTotalCardsValue(), 940, 600);
 		g.drawString("Value: "+dealer.getTotalCardsValue(), 340, 600);
