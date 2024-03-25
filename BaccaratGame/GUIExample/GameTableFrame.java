@@ -35,7 +35,7 @@ public class GameTableFrame extends JFrame{
     }
     
     public void getGameTable() {
-    	setTitle("HighSum Game");
+    	setTitle("Baccarat Game");
  		add(gameTablePanel);
 		pack();
 	   	setVisible(true);

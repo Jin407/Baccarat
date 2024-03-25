@@ -30,8 +30,8 @@ public class ViewController {
     }
 
 	public void displayExitGame() {
-		System.out.println("Thank you for playing HighSum game");
-		JOptionPane.showMessageDialog(null, "Thank you for playing HighSum game","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+		System.out.println("Thank you for playing Baccarat game");
+		JOptionPane.showMessageDialog(null, "Thank you for playing Baccarat game","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 		gameFrame.dispose();
 	}
 	
@@ -44,33 +44,33 @@ public class ViewController {
 	}
 	
 	public void displayPlayerWin(Player player) {
-		System.out.println(player.getLoginName()+" Wins!");
+		System.out.println("Player Wins!");
 		gameFrame.getGameTablePanel().setChipsOnTable(0);
 		gameFrame.updateGameTable();
-		JOptionPane.showMessageDialog(null, player.getLoginName()+" wins!","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+		JOptionPane.showMessageDialog(null, player.getLoginName()+" wins!","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 	}
 	
 	public void displayDealerWin() {
 		System.out.println("Dealer Wins!");
 		gameFrame.getGameTablePanel().setChipsOnTable(0);
 		gameFrame.updateGameTable();
-		JOptionPane.showMessageDialog(null,"Dealer wins!","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+		JOptionPane.showMessageDialog(null,"Dealer wins!","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 	}
 	
 	public void displayTie() {
 		System.out.println("It is a tie!.");
 		gameFrame.getGameTablePanel().setChipsOnTable(0);
 		gameFrame.updateGameTable();
-		JOptionPane.showMessageDialog(null,"It's a tie!","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+		JOptionPane.showMessageDialog(null,"It's a tie!","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 	}
 	
 	public void displayPlayerQuit() {
 		System.out.println("You have quit the current game.");
-		JOptionPane.showMessageDialog(null, "You have quit the current game.","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+		JOptionPane.showMessageDialog(null, "You have quit the current game.","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 	}
 	
 	public void displayPlayerQuitFirstRoundMessage() {
-		JOptionPane.showMessageDialog(null, "Player cannot quit in the first round","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+		JOptionPane.showMessageDialog(null, "Player cannot quit in the first round","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 	}
 	
 	public void displayPlayerCardsOnHand(Player player) {
@@ -120,11 +120,11 @@ public class ViewController {
 	public void displayPlayerNameAndLeftOverChips(Player player) {
 		System.out.println(player.getLoginName()+", You are left with "+player.getChips()+" chips");
 		gameFrame.updateGameTable();
-		JOptionPane.showMessageDialog(null, player.getLoginName()+", you have "+player.getChips()+" chips left","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+		JOptionPane.showMessageDialog(null, player.getLoginName()+", you have "+player.getChips()+" chips left","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 	}
 	
 	public void displayGameTitle() {
-		System.out.println("HighSum GAME");
+		System.out.println("Baccarat GAME");
 	}
 	
 	public void displaySingleLine() {
@@ -145,7 +145,7 @@ public class ViewController {
 	public int getPlayerBet(Player player) {
 		
 		Object[] options = {"Player", "Dealer"};
-		int call = JOptionPane.showOptionDialog(null, "Select an option:", "HighSum Game", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+		int call = JOptionPane.showOptionDialog(null, "Select an option:", "Baccarat Game", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 
 		if (call == JOptionPane.YES_OPTION && player.getChips() > 0) {
 		    // Dealer selected
@@ -159,7 +159,7 @@ public class ViewController {
 	
 	public int getPlayerCallOrQuit(Player player) {
 		
-		int call = JOptionPane.showConfirmDialog(null,"Do you wish to bet?", "HighSum Game", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null);
+		int call = JOptionPane.showConfirmDialog(null,"Do you wish to bet?", "Baccarat Game", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null);
 		
 		if(call == JOptionPane.YES_OPTION && player.getChips()>0) {
 			
@@ -174,7 +174,7 @@ public class ViewController {
 	}
 	
 	public int getPlayerNextGame() {
-		int nextGame = JOptionPane.showConfirmDialog(null,"Next Game?", "HighSum Game", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null);
+		int nextGame = JOptionPane.showConfirmDialog(null,"Next Game?", "Baccarat Game", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null);
 		return nextGame;
 	}
 	
@@ -182,7 +182,7 @@ public class ViewController {
 		boolean validBetAmount = false;
 		int chipsToBet = 0;
 		while(!validBetAmount) {
-			int option = JOptionPane.showOptionDialog(null, gameFrame.getCallPanel(), "HighSum Game",
+			int option = JOptionPane.showOptionDialog(null, gameFrame.getCallPanel(), "Baccarat Game",
 	                JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE,
 	                null, new Object[]{"OK"}, null);
 			
@@ -195,15 +195,15 @@ public class ViewController {
 					
 					if(chipsToBet<=0) {
 						System.out.println("Chips cannot be negative");
-						JOptionPane.showMessageDialog(null, "Please enter a number more than zero","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+						JOptionPane.showMessageDialog(null, "Please enter a number more than zero","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 					}else if(chipsToBet>player.getChips()) {
-						JOptionPane.showMessageDialog(null, "Insufficent chips, you have "+player.getChips()+" chips","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+						JOptionPane.showMessageDialog(null, "Insufficent chips, you have "+player.getChips()+" chips","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 						System.out.println("You do not have enough chips");
 					}else {
 						validBetAmount = true;
 					}
 				}catch(NumberFormatException e) {
-					JOptionPane.showMessageDialog(null, "Please enter a number","HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
+					JOptionPane.showMessageDialog(null, "Please enter a number","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
 				}
 			}
 		}
@@ -217,8 +217,7 @@ public class ViewController {
 	
 	public boolean getPLayerlogin() {
 		boolean login = false;
-		int count = 3;
-		while(count>0) {
+		while(!login) {
 	        int option = JOptionPane.showOptionDialog(null, gameFrame.getLoginPanel(), "Game Login",
 	                JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
 	                null, new Object[]{"Login"}, null);
@@ -226,18 +225,26 @@ public class ViewController {
 	        if(option == JOptionPane.OK_OPTION) {
 	
 	     	       String result = "Successful login";
+
+				   player.setLoginName(gameFrame.getLoginPanel().getInputName());
+				   String chips = gameFrame.getLoginPanel().getChips();
 	     	       
-	     	       if(player.checkPassword(gameFrame.getLoginPanel().getInputPassword()) && player.getLoginName().equals(gameFrame.getLoginPanel().getInputName())) {
-	     	    	   login = true;
-	     	    	   count = 0;
-	     	   	   		
-	     	       }else {
-	     	    	   count--;
-	     	    	   result = "Incorrect username or password, you have "+count+" attempt left";   
-	     	       }
+					try {
+						int amount = Integer.parseInt(chips);
+						
+						if(amount<=0) {
+							System.out.println("Chips cannot be negative");
+							JOptionPane.showMessageDialog(null, "Please enter a number more than zero","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
+						}else {
+							login = true;
+							player.setChips(amount);
+							JOptionPane.showMessageDialog(null, result,"Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
+						}
+					}catch(NumberFormatException e) {
+						JOptionPane.showMessageDialog(null, "Please enter a number","Baccarat Game",JOptionPane.PLAIN_MESSAGE,null);
+					}
 	     	       
 	     	       
-	     	       JOptionPane.showMessageDialog(null, result,"HighSum Game",JOptionPane.PLAIN_MESSAGE,null);
 	     	       
 	        } else {
 	        	login = false;

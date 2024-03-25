@@ -1,4 +1,4 @@
-epackage GUIExample;
+package GUIExample;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -9,30 +9,30 @@ public class GameLoginPanel extends JPanel {
 	
 	private JTextField loginField;
 	private JLabel loginLabel;
-	private JPasswordField passwordField;
-	private JLabel passwordLabel;
+	private JTextField chipsField;
+	private JLabel chipsLabel;
 	
 	public GameLoginPanel() {
 		
 		setPreferredSize(new Dimension(250, 80));
 		
 		
-		loginLabel = new JLabel("Enter username: ");
+		loginLabel = new JLabel("Username: ");
 		loginField = new JTextField(10);
-		passwordLabel = new JLabel("Password:    ");
-		passwordField = new JPasswordField(10);
+		chipsLabel = new JLabel("Chips:    ");
+		chipsField = new JTextField(10);
 		
 		
 		add(loginLabel);
 		add(loginField);
-		add(passwordLabel);
-		add(passwordField);
+		add(chipsLabel);
+		add(chipsField);
 		
 	}
 	
-	public String getInputPassword() {
+	public String getChips() {
 
-		return new String(passwordField.getPassword());
+		return chipsField.getText();
 	}
 	
 	public String getInputName() {
