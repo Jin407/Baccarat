@@ -16,7 +16,7 @@ public class Player extends User{
 		return this.chips;
 	}
 
-	public int setChips(int chips){
+	public void setChips(int chips){
 		this.chips = chips;
 	}
 	
