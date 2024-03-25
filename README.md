@@ -8,7 +8,7 @@ Welcome to the Baccarat Game with Java GUI repository! This project implements a
 
 - **Object-Oriented Design**: The game logic is structured using object-oriented programming principles, promoting code reusability, maintainability, and scalability.
 
-- **Baccarat Rules Adherence**: The game adheres to the standard rules of Baccarat, providing an authentic gaming experience.
+- **Baccarat Rules Adherence**: The game adheres to the standard rules of Baccarat, providing an authentic gaming experience. Users can bet on either Player or Dealer("Banker") or not bet at all for each round. If the total value of the first 2 cards of Player and Dealer results in a draw a third card shall not be drawn. Only when the first 2 cards of either Player or Dealer add ups to a value of less than 5 then shall a third card be drawn.
 
 - **Player Interaction**: Players can place bets, observe game outcomes, and enjoy the thrill of Baccarat from the comfort of their computer.
 
@@ -29,7 +29,7 @@ To run the Baccarat game on your local machine, follow these steps:
    java Baccarat
    ```
 
-3. **Enjoy the Game**: Once the game is running, you can start playing Baccarat using the GUI interface.
+3. **Enjoy the Game**: Once the game is running, you can start playing Baccarat using the GUI interface. Key in your username and the amount of chips you wish to have in the Game login. Thereafter, you can start placing bets.
 
 ### Contributing
 
