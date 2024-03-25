@@ -1,4 +1,4 @@
-package GUIExample;
+epackage GUIExample;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -17,7 +17,7 @@ public class GameLoginPanel extends JPanel {
 		setPreferredSize(new Dimension(250, 80));
 		
 		
-		loginLabel = new JLabel("Login name: ");
+		loginLabel = new JLabel("Enter username: ");
 		loginField = new JTextField(10);
 		passwordLabel = new JLabel("Password:    ");
 		passwordField = new JPasswordField(10);
