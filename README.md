@@ -46,6 +46,4 @@ This project is licensed under the [MIT License](LICENSE), allowing you to use, 
 
 ### Contact
 
-If you have any questions, suggestions, or feedback, please feel free to contact the project maintainer at [limjinan407@gmail.com]. Your input is highly appreciated!
-
 Thank you for choosing the Baccarat Game with Java GUI. Let the games begin! 🃏💰
